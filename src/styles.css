@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+:root {
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gray-50);
+  font-family: "Poppins", sans-serif;
+}
+
+/* header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+header h3 {
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+header h3 span {
+  font-size: 1.7rem;
+}
+
+header small {
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
+.ButtonContainer {
+  padding: 1rem 2rem 1.5rem;
+}
+
+.ButtonContainer button {
+  cursor: pointer;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  background-color: var(--gray-100);
+  border: 1px solid var(--gray-500);
+  border-radius: 5px;
+  padding: 0.3rem 0.4rem;
+}
+
+.ButtonContainer .ActiveBtn {
+  background-color: var(--gray-300);
+}
+
+/* main */
+
+main {
+  min-height: 75vh;
+  max-width: 1200px;
+  margin: 1rem auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px var(--gray-300), -1px -1px 5px var(--gray-300);
+  background-color: var(--gray-100);
+}
+
+/* learn */
+
+.Learn {
+  color: var(--gray-700);
+  font-weight: 600;
+  padding: 2rem;
+}
+
+.Learn img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Learn a {
+  color: var(--gray-500);
+}
+
+.Learn
+  :is(.FirstSection, .SecondSection, .ThirdSection, .FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection, .FourthSection, .FifthSection) {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.Learn .FirstSection,
+.Learn
+  :is(.FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection)
+  .TextNImgContainer,
+.Learn .FifthSection .TextNImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.Learn .FirstSection,
+.Learn .FlexWrapTriangleTypeSection .TextNImgContainer,
+.Learn .FifthSection .TextNImgContainer {
+  flex-wrap: wrap;
+}
+
+.Learn .FlexWrapReverseTriangleTypeSection .TextNImgContainer {
+  flex-wrap: wrap-reverse;
+}
+
+.Learn
+  :is(.FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection)
+  .TextNImgContainer
+  :is(.TextContainer, .ImageContainer),
+.Learn .FirstSection :is(.ImageContainer, .TextContainer),
+.Learn .FifthSection :is(.ImageContainer, .TextContainer) {
+  max-width: 30rem;
+}
+
+.Learn .FirstSection .TextContainer {
+  padding: 1rem;
+}
+
+.Learn .SecondSection {
+  margin-top: -2rem;
+}
+
+.Learn :is(.SecondSection, .ThirdSection, .FourthSection, .FifthSection) h4 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.Learn :is(.SecondSection, .ThirdSection, .FourthSection, .FifthSection) p {
+  font-size: 1.2rem;
+}
+
+.Learn :is(.SecondSection, .ThirdSection) ol {
+  font-size: 1.1rem;
+}
+
+.Learn
+  :is(.FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection)
+  h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.Learn :is(.FourthSection, .FifthSection) span {
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.Learn .ThanksDiv {
+  width: fit-content;
+  margin: auto;
+}
+
+@media (max-width: 1125px) {
+  .Learn
+    :is(.FirstSection, .SecondSection, .ThirdSection, .FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection, .FourthSection, .FifthSection) {
+    max-width: 600px;
+  }
+
+  .Learn
+    :is(.FlexWrapTriangleTypeSection, .FlexWrapReverseTriangleTypeSection)
+    .TextNImgContainer
+    :is(.TextContainer, .ImageContainer),
+  .Learn .FirstSection :is(.ImageContainer, .TextContainer),
+  .Learn .FifthSection :is(.ImageContainer, .TextContainer) {
+    max-width: 35rem;
+  }
+}
+
+/* quiz */
+
+.Quiz {
+  max-width: 700px;
+  margin: auto;
+}
+
+.QuizQuestionDiv {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  font-weight: bold;
+}
+
+.QuizQuestionDiv.FirstQuestion {
+  padding-top: 3rem;
+}
+
+.QuizQuestionDiv div {
+  text-align: justify;
+}
+
+.InputDiv {
+  display: inline-block;
+  margin: 0.5rem 2rem;
+}
+
+.Quiz :is(input, label) {
+  cursor: pointer;
+}
+
+.QuizBtnContainer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.QuizBtnContainer .CheckAnswerBtn {
+  padding: 0.3rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border-color: inherit;
+  cursor: pointer;
+}
+
+.QuizBtnContainer .CheckAnswerBtn:hover {
+  box-shadow: 1px 1px 2px var(--gray-500);
+}
+
+.QuizBtnContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.QuizBtnContainer div {
+  font-weight: bold;
+}
+
+.QuizBtnContainer .PointsDiv {
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-500);
+}
+
+/* calculator */
+
+.Calculator .InputDivContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.Calculator .InputDiv {
+  margin: 0;
+}
+
+.Calculator .InputDiv :is(input, label) {
+  cursor: pointer;
+}
+
+/* angles of triangle */
+
+.AnglesOfTriangle {
+  font-weight: 600;
+  color: var(--gray-700);
+  text-align: center;
+  margin: auto;
+  max-width: 900px;
+}
+
+.AnglesOfTriangle h3 {
+  font-size: 1.3rem;
+}
+
+.AnglesOfTriangle .ImageNInputContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.AnglesOfTriangle img {
+  max-width: 100%;
+  height: auto;
+}
+
+.AnglesOfTriangle input {
+  max-width: 5rem;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  text-align: center;
+  outline: none !important;
+  border: 1px solid var(--gray-500);
+}
+
+.AnglesOfTriangle .AoTInputDiv {
+  margin: 0.5rem;
+  width: 18rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AnglesOfTriangle .AoTInputDiv label {
+  font-size: 1.2rem;
+}
+
+.AnglesOfTriangle .ShowMessageDiv {
+  max-width: 15rem;
+}
+
+/* check hypotenuse */
+
+.CheckHypotenuse .AoTInputDiv {
+  width: 20rem;
+}
+
+/* CalculateArea */
+
+.CalculateArea .CalculateAreaWithBtnContainer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.CalculateArea .CalculateAreaWithBtnContainer button {
+  font-size: 1.1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 15px;
+  border: 2px solid var(--gray-500);
+  cursor: pointer;
+}
+
+.CalculateArea .CalculateAreaWithBtnContainer button:hover {
+  background-color: var(--gray-300);
+}
+
+/* footer */
+
+footer {
+  font-weight: 600;
+  color: var(--gray-700);
+  border-top: 1px solid var(--gray-700);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer .Icon {
+  font-size: 2rem;
+  color: var(--gray-500);
+}
+
+footer .Icon:hover {
+  transform: scale(1.1);
+}
+
+/* list */
+
+.list-non-bullet {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
+
+/*  */
